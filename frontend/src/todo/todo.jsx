@@ -40,7 +40,7 @@ export default class Todo extends Component {
                 <TodoForm description={this.state.description}
                     handleChange={this.handleChange}
                     handleAdd={this.handleAdd}/>
-                <TodoList />
+                <TodoList list={this.state.list} />
             </div>
         )
     }

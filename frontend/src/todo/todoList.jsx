@@ -2,22 +2,25 @@ import React from "react";
 
 export default props => {
 
+    const list = props.list || []
     const renderRows = () => {
-        return (
-            <tr><td>ok</td></tr>
-        )
+        return list.map(todo => (
+            <tr key={todo._id}>
+                <td>{todo.description}</td>
+            </tr>
+        ))
     }
 
     return (
-    <table className="table">
-        <thead>
-            <tr>
-                <th>Descriçãp</th>
-            </tr>
-        </thead>
-        <tbody>
-            {renderRows()}
-        </tbody>
-    </table>
+        <table className="table">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                {renderRows()}
+            </tbody>
+        </table>
     )
 }
