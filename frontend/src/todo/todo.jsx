@@ -48,7 +48,7 @@ export default class Todo extends Component {
 
     handleMarkAsPending(todo) {
         axios.put(`${URL}/${todo._id}`, { ...todo, done: false })
-            .them(resp => this.refresh())
+            .then(resp => this.refresh())
     }
 
     render() {
