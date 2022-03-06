@@ -4,8 +4,6 @@ import { connect } from "react-redux";
 import IconButton from "../template/iconButton";
 
 const TodoList = props => {
-    console.log(props, props.list)
-
     const list = props.list || []
     const renderRows = () => {
         return list.map(todo => (
