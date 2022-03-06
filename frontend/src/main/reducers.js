@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-// rootReducers
+// const rootReducers = 
 
 export default combineReducers({
     todo: () => ({
@@ -20,3 +20,5 @@ export default combineReducers({
         }]
     })
 })
+
+// rootReducers
